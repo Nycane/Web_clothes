@@ -1,7 +1,12 @@
 const mysql = require("mysql2");
 require("dotenv").config();
 const pool = mysql.createPool({
-  url:"mysql://root:8ZWhccd3myW6u4fZDrP9@containers-us-west-68.railway.app:7637/railway"
+  url:"mysql://root:8ZWhccd3myW6u4fZDrP9@containers-us-west-68.railway.app:7637/railway",
+  poolOptions: {
+    max: 10,
+    min: 0,
+    acquireTimeout: 10000,
+  }
 });
 pool.getConnection((err, conn) => {
   if (err) console.log(err);
