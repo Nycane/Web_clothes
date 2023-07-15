@@ -1,4 +1,3 @@
-import axiosClient from './axiosClient';
 import createAxiosAuth from './axiosAuth';
 const orderAPi = {
     async addOdrer(data, dispatch) {
