@@ -4,7 +4,7 @@ import userSlice from '../Redux/Slice/userSlice';
 import jwtDecode from 'jwt-decode';
 function createaAxiosAuth({ accessToken, refreshToken }, dispatch) {
     const axiosAuth = axios.create({
-        baseURL: 'http://localhost:8000/api/v1/',
+        baseURL: process.env.REACT_APP_API_URL,
         headers: {
             'Content-Type': 'application/json',
         },
