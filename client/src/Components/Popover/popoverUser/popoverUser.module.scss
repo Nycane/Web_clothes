@@ -1,0 +1,25 @@
+.user-wrap {
+    width: 175px;
+    height: auto;
+}
+.user-menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .menu-item {
+        width: 100%;
+        padding: 12px;
+        border-bottom: 1px solid #e6e6e6;
+        & .text-item {
+            transition: all 0.4s ease;
+            &:hover {
+                color: var(--color-brown);
+            }
+        }
+    }
+    & .menu-item:last-child {
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,77 @@
+.billing-wrap {
+    padding-left: 30px;
+    & .title {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    & .billing-field {
+        & .field-item {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            & label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: 500;
+                & .required {
+                    color: red;
+                }
+            }
+            & input {
+                width: 100%;
+                border-width: 0 0 2px;
+                border-color: #e5e5e5;
+                padding: 0;
+                height: 40px;
+                line-height: 40px;
+                color: var(--color-black);
+            }
+            & textarea {
+                width: 100%;
+                border-width: 0 0 2px;
+                border-color:#e5e5e5;
+                padding: 0;
+                height: 80px;
+                resize: none;
+                line-height: 40px;
+                color: var(--color-black)
+            }
+            & .error{
+                color: red;
+            }
+        }
+        &.active{
+            display: block;
+        }
+    }
+}
+.redirect-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0px;
+    & .redirect-title{
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin: 12px 0px;
+        font-weight: 400;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+    }
+    & .redirect-btn{
+        margin: 12px 0px;
+        text-transform: uppercase;
+        color: var(--color-white);
+        padding: 20px 124px;
+        background-color: black;
+        font-weight: 500;
+        &:hover{
+            background-color: var(--color-brown);
+        }
+    }
+}

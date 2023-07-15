@@ -1,0 +1,63 @@
+// // layout for other component
+// hover text
+@import '../../Scss/mixins/hoverText.scss';
+.background{
+    background-image: url('https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/bg-breadcrumb.jpg)');
+    margin: 0 0 90px;
+    font-size: calc(var(--font-size-body, 14px) + 6px);
+    padding: 70px 0 75px;
+    background-position: 50%;
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.wrap{
+    & .title {
+        margin-top: 0;
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #222222;
+        font-size: 4rem;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+    & .icon {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    & .title-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .before {
+            @include hover-text;
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #222;
+        }
+        & .current {
+            font-size: 1.5rem;
+            color: #666;
+        }
+    }
+}
+
+// layout about
+.img-bg {
+    background-image: url('https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2023/01/bg-about.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    padding: 465px 15px 110px 15px;
+    & .img-title {
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+}

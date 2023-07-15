@@ -1,0 +1,154 @@
+// hoverText
+@import '../../../Scss/mixins/hoverText.scss';
+.card {
+    padding: 0 14px;
+    margin: 0 0 30px;
+    width: 100%;
+    height: auto;
+    background-color: var(--color-white);
+    // hover product-options
+    &:hover > .card-body .product-options {
+        opacity: 1;
+        bottom: -20px;
+    }
+    .card-body {
+        width: 100%;
+        height: 80%;
+        margin-bottom: 14px;
+        position: relative;
+        & .img {
+            width: 100%;
+            height: 100%;
+        }
+        & .product-options {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all ease 0.6s;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            width: 100%;
+            position: absolute;
+            bottom: 50%;
+            padding: 6px;
+            opacity: 0;
+            & .btn-cart,
+            .btn-wishlist,
+            .btn-quickview {
+                margin: 5px;
+                color: #fff;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background: #fff;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border: 0;
+                padding: 0;
+                font-size: 0;
+                white-space: nowrap;
+                transition: all ease 0.4s;
+                &:hover {
+                    background-color: var(--color-brown);
+                    .icon-cart,
+                    .icon-heart,
+                    .icon-quickview {
+                        color: var(--color-white);
+                    }
+                }
+                & .icon-cart,
+                .icon-heart,
+                .icon-quickview {
+                    transition: all ease 0.4s;
+                    line-height: 40px;
+                    color: #222;
+                    font-size: 2rem;
+                }
+            }
+        }
+        & .product-sale,.product-hot{
+            text-align: center ;
+            color:var(--color-black);
+            background: #fff;
+            font-size: 12px;
+            padding: 0 7px;
+            line-height: 24px;
+            min-width: 50px;
+            z-index: 1;
+            text-transform: uppercase;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+        }
+    }
+    .card-content {
+        width: 100%;
+        height: 20%;
+        text-align: center;
+        & .product-title {
+            @include hover-text;
+            display: block;
+            text-decoration: none;
+            color: #222;
+            font-size: 1.4rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        & .product-price {
+            color: var(--color-brown);
+            font-weight: 500;
+            font-size: 1.8rem;
+            & .discount{
+                font-size: 1.4rem;
+                color: #666;
+                font-weight: 300;
+            }
+        }
+    }
+}
+.disabled {
+    pointer-events: none;
+}
+.custom-slider {
+    padding: 0px;
+}
+.card-modal {
+    width: 940px;
+    height: 470px;
+}
+.product-detail-wrap {
+    padding-right: 13px !important;
+    height: 470px;
+    transform: translateX(0%);
+    background-color: white;
+    animation: fade ease-in-out 0.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+
+        transform: translateX(0%);
+    }
+}
+
+.product-detail-modal {
+    height: 470px;
+    padding: 25px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.img-modal {
+    width: 100%;
+    height: 470px;
+}
+// custom Modal
+.background-none {
+    background-color: transparent;
+}

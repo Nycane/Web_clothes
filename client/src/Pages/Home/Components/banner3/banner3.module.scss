@@ -1,0 +1,95 @@
+.wrap-img1,
+.wrap-img2 {
+    padding: 0 !important;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &:hover > .img2,
+    &:hover > .img1 {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+    & .img1,
+    .img2 {
+        width: 100%;
+        height: 100%;
+        transition: all 0.7s linear;
+    }
+    .wrap-content1,
+    .wrap-content2 {
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        & .title1,
+        .title2 {
+            font-size: 2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0px;
+            margin-top: 0;
+        }
+        & .title-sale1,
+        .title-sale2 {
+            color: #222222;
+            font-size: 40px;
+            font-weight: 500;
+            margin-bottom: 75px;
+            margin-top: 15px;
+        }
+        .button1,
+        .button2 {
+            font-weight: 500;
+            text-transform: uppercase;
+            background-color: var(--color-brown);
+            border-style: solid;
+            border: none;
+            padding: 20px 74px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--color-white);
+            transition: all 0.3s ease;
+            opacity: 0;
+            cursor: pointer;
+            &:hover {
+                background-color: var(--color-black);
+            }
+        }
+    }
+    &:hover {
+        .button1,
+        .button2 {
+            opacity: 1;
+        }
+    }
+}
+.row-info {
+    background-color: #f8f5f4;
+    padding: 95px 15px 90px 15px;
+}
+.wrap-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    & .title,
+    .title-number {
+        display: flex;
+        padding: 10px 0px;
+        justify-content: center;
+        width: 100%;
+        color: #222;
+    }
+    & .title-number{
+        font-size: 3.5rem;
+    }
+    & .title {
+        font-size: 1.8rem;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    & .text {
+        font-size: 1.4rem;
+        color: #666666;
+    }
+}

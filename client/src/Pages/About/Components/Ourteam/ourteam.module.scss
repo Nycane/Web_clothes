@@ -1,0 +1,37 @@
+.ourteam-item {
+    width: 262px !important;
+    height: auto;
+    text-align: start;
+    & .icon-social {
+        margin-bottom: 12px;
+        & .icon {
+            margin-right: 15px;
+        }
+    }
+    & .text {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    & .info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        & .img {
+            margin-right: 15px;
+            border-radius: 999px;
+        }
+        & .info-content {
+            & .info-name {
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+            }
+            & .info-job {
+                font-size: 1.2rem;
+                color: #999999;
+            }
+        }
+    }
+}

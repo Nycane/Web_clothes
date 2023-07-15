@@ -1,0 +1,104 @@
+.wishlist-wrap {
+    border: 1px solid #ccc;
+    width: 100%;
+    border-collapse: collapse;
+    & .wishlist-remove,
+    .wishlist-img,
+    .wishlist-content,
+    .wishlist-btn {
+        vertical-align: center;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    & .wishlist-btn {
+        border-left: 1px solid #ccc;
+    }
+    & .wishlist-remove {
+        & .removeItem {
+            font-size: 3rem;
+            color: #666;
+            font-weight: 200;
+            transition: all 0.4s ease;
+            &:hover {
+                transform: rotate(90deg);
+                color: var(--color-brown);
+                cursor: pointer;
+            }
+        }
+    }
+    & .wishlist-content {
+        & .name {
+            display: inline-block;
+            font-size: 1.4rem;
+            padding-bottom: 12px;
+        }
+        & .price {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--color-brown);
+        }
+        & .current-date {
+            margin-top: 12px;
+            color: #666666;
+        }
+    }
+}
+.btn-add {
+    color: #fff;
+    display: inline-block;
+    line-height: 32px;
+    height: 32px;
+    background: var(--button-color, #222);
+    padding: 0 20px;
+    font-size: 13px;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:hover {
+        background-color: var(--color-brown);
+    }
+}
+.wishlist-empty {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    color: #666666;
+}
+.list-icon {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    & .text-share {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+    & .icon-social-tw,
+    .icon-social-fb,
+    .icon-social-db,
+    .icon-social-ins {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+    & .icon-social-tw {
+        background-color: #ffffff;
+        color: #1D9BF0;;
+    }
+    & .icon-social-fb {
+        background-color: #3b5998;
+        color: white;
+    }
+    & .icon-social-db {
+        background-color: #dc4e41;
+        color: white;
+    }
+    & .icon-social-ins {
+        background-color: #f60962;
+        color: white;
+    }
+}

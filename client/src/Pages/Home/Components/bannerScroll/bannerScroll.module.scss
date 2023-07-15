@@ -1,0 +1,54 @@
+.img-scroll {
+    background-image: url('https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2023/02/bg-parallax2-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 730px;
+    padding: 200px 0px 150px 0px;
+    background-attachment: fixed;
+}
+
+.img-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+.wrap-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    & .title {
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 58px;
+        width: 100%;
+    }
+}
+.wrap-button {
+    margin-top: 60px;
+    & .button {
+        font-weight: 500;
+        text-transform: uppercase;
+        background-color: #02010100;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+        border-radius: 0px 0px 0px 0px;
+        padding: 16px 74px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--color-white);
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: var(--color-brown);
+            border-color: var(--color-brown);
+        }
+    }
+}

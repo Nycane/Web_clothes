@@ -1,0 +1,55 @@
+.title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #222;
+    font-weight: 500;
+    margin: 0 auto;
+    display: block;
+    &.center{
+            width: 100vw;
+            text-align: center;
+    }
+}
+.text-icon {
+    color: #222222;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+.slider-wrap {
+    width: 100%;
+}
+.slider-wrap .arrow-prev,
+.slider-wrap .arrow-next {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    color: #4b4b4b;
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 32px;
+    z-index: 1;
+    &:hover {
+        color: var(--color-black);
+    background: #fff;   
+
+    }
+}
+.slider-wrap .arrow-prev {
+    right: 8px;
+}
+.slider-wrap .arrow-next {
+   left: 8px;
+}
+// handle poinevents in react-slick
+.disabled{
+    pointer-events: none;
+}

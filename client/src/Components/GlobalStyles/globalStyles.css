@@ -1,0 +1,124 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap');
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-brown: #7f4227;
+    /* // Font family */
+    --font-default: 'Jost', sans-serif;
+}
+.slick-slide > div  {
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    flex-wrap: wrap;
+}
+.slick-slide.disable{
+        pointer-events: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+
+}
+body {
+    font-family: var(--font-default);
+    font-size: 1.6rem;
+    /* width: 1528px !important; */
+    /* // overflow: hidden; */
+}
+a{
+    text-decoration: none;
+    color: var(--color-black);
+    transition: all .3s ease;
+}
+button{
+    outline:none;
+    border: 0px;
+    cursor: pointer;
+}
+/* // Scrollbar CSS */
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+/* custom react-slick */
+*:focus {
+    outline: 0;
+    outline: none;
+}
+/* custom react-slider */
+.slider{
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  position: relative;
+}
+.slider .thumb{
+  width: 12px;
+    height: 12px;
+    border: 2px solid black;
+    top: -6px;
+    background: #fff;
+    cursor: e-resize;
+}
+/* Custom Toastify */
+
+.Toastify__toast {
+  z-index: 99999;
+}
+/*  */
+/* .ReactModal__Body--open{
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .ReactModal__Overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+  .ReactModal__Content{
+    outline: none;
+    z-index: 100;
+  }
+  .ReactModal__Overlay,
+  .ReactModal__Content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .ReactModal__Content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+  } */
+  /* .ReactModal__Overlay *{
+    pointer-events:none;
+  }
+  .ReactModal__Overlay button{
+    pointer-events:none;
+  } */

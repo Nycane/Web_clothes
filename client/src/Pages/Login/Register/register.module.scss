@@ -1,0 +1,50 @@
+.form-register {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    height: 500px;
+    position: absolute;
+    transform: translateX(140%);
+    padding: 40px;
+    transition: transform 0.5s ease;
+    visibility: hidden;
+    width: 500px;
+    width: 100%;
+    & .error {
+        color: red;
+        display: block;
+    }
+    & input {
+        padding: 16px 20px;
+        display: block;
+        width: 100%;
+        margin: 12px 0px;
+        border: 1px solid #e5e5e5;
+    }
+    & 
+    .btn-register,
+    .btn-next-signin
+   {
+        margin-top: 14px;
+        width: 100%;
+        padding: 17px 20px;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: var(--color-brown);
+        }
+    }
+    & 
+    .btn-next-signin {
+        background-color: rgba(34, 34, 34, 0.6);
+    }
+    &.active {
+        visibility: visible;
+        transform: translateX(0%);
+    }
+}

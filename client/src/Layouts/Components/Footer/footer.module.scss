@@ -1,0 +1,107 @@
+$padding-df: 6px;
+@import "../../../Scss//mixins/hoverText.scss";
+
+@mixin title-content() {
+    & .title-content {
+        h2 {
+            padding: $padding-df;
+            font-size: 1.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+}
+// -------------------------------
+.footer {
+    background: transparent;
+    padding-top: 90px;
+    border-top: 1px solid #e9e9e9;
+    padding-bottom: 30px;
+    position: relative;
+    color: var(--text-color, #666);
+    border-bottom: none;
+    z-index: 2;
+    margin-top: 100px;
+}
+.img-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 110px;
+        height: 28px;
+    }
+}
+// content-left
+.content-left {
+    text-align: start;
+
+    .text-content {
+        padding-bottom: 24px;
+        font-size: 1.4rem;
+        p {
+            padding: $padding-df;
+            @include hover-text();
+        }
+    }
+    .logo-content {
+        & .icon-social {
+            padding: $padding-df;
+            margin-right: 20px;
+            @include hover-text();
+        }
+    }
+}
+// content-center
+.content-center {
+    @include title-content();
+    & .text-content {
+        p {
+            padding: $padding-df;
+            color: #666666;
+            font-size: 1.4rem;
+            @include hover-text();
+        }
+    }
+}
+// content-right
+.content-right {
+    @include title-content();
+    & .text-content {
+        p {
+            margin-top: 10px;
+            padding: $padding-df;
+            color: #666666;
+            font-size: 1.4rem;
+        }
+    }
+    & .form-group {
+        padding: 12px $padding-df;
+        position: relative;
+        input {
+            width: 100%;
+            outline: none;
+            border: 0;
+            border-bottom: 1px solid black;
+            padding: 0;
+            font-size: 1.4rem;
+            line-height: 35px;
+            height: 35px;
+            background: transparent;
+        }
+        & .icon {
+            position: absolute;
+            right: 2%;
+            font-size: 2.2rem;
+            @include hover-text();
+        }
+    }
+}
+
+.text-bottom {
+    padding: 35px 15px 10px 15px;
+    text-align: center;
+    color: #222222;
+    font-size: 1.4rem;
+}

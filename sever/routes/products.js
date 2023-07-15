@@ -1,0 +1,16 @@
+const express = require('express')
+const router = express.Router()
+const productsController = require('../controllers/productsController')
+router.get('/search',productsController.getSearchProduct)
+router.get('/size',productsController.getColorProducts)
+router.get('/brand',productsController.getBrandProducts)
+router.get('/category',productsController.getCategoryProducts)
+router.get('/color',productsController.getSizeProducts)
+router.get('/filter',productsController.filterProducts)
+// router.get('/variant',productsController.getProductVariantById)
+router.get('/variant/:id',productsController.getProductVariantById)
+router.get('/image/:id',productsController.getProductImageById)
+router.get('/:id',productsController.getProductById)
+router.get('/',productsController.getProducts)
+
+module.exports =router

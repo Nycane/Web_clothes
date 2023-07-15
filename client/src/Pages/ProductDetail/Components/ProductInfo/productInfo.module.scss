@@ -1,0 +1,305 @@
+.product-info {
+    & .title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+        color: var(--color-black);
+        word-break: break-word;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    & .rating {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        & .icon-star {
+            font-size: 1.3rem;
+            color: #de982b;
+        }
+        & .title-rating {
+            position: relative;
+            right: -5px;
+            color: #666;
+            font-size: 1.4rem;
+        }
+    }
+    & .price {
+        color: var(--color-brown);
+        font-size: 2.5rem;
+        display: inline-block;
+        font-weight: 500;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        border-bottom: 1px solid #e5e5e5;
+        display: block;
+        & .discount{
+            font-size: 2rem;
+            color: #666;
+        }
+    }
+    & .count-view {
+        margin: 24px 0px;
+        & .title-view {
+            font-weight: 500;
+            color: var(--color-black);
+            font-size: 1.4rem;
+            padding-left: 12px;
+        }
+    }
+    & .description {
+        color: #666666;
+    }
+    & .color-size {
+        & .color{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0px;
+            & .color-title{
+                text-transform: uppercase;
+                width: 100%;
+                margin-top: 15px ;
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+                color: #666666;
+               
+                & .color-text{
+                    padding-left: 6px;
+                    color: black;
+                }
+            }
+            & .color-code {
+                width: 25px;
+                height: 25px;
+                border-radius: 999px;
+                margin-right: 12px;
+                border: 3px solid white;
+                box-shadow: 0 0 1px 1px #ddd;
+                cursor: pointer;
+                &.active {
+                    border: 2px solid black;
+                }
+            }
+            & .select-color{
+                display: flex;
+            }
+        }
+        & .size {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0px;
+            & .size-title{
+                text-transform: uppercase;
+                margin-top: 15px ;
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+                color: #666666;
+                & .size-text {
+                    padding-left: 6px;
+                    color: black;
+                }
+            }
+            & .size-box {
+                min-width: 48px;
+                margin-right: 12px;
+                height: 38px;
+                line-height: 38px;
+                text-align: center;
+                display: inline-block;
+                background-color: transparent;
+                box-shadow: 0 0 1px 1px #ddd;
+                cursor: pointer;
+                transition: all 0.3s linear;
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+                &.active {
+                    background-color: black;
+                    color: white;
+                }
+            }
+            & .select-size{
+                width: 100%;
+            }
+            & .size-guide{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & .guide{
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    color: black;
+                    position: relative;
+                    cursor: pointer;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        background-color: black;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        transform-origin: 50%;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 1px;
+                        transition: transform 0.3s ease;
+                    }
+                    &:hover::after{
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+        & .color-size-clear{
+            display: inline-block;
+            margin: 12px 0px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            &:hover{
+                color: var(--color-brown);
+            }
+
+        }
+    }
+}
+.product-option {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    & .btn-quantity {
+        border: 1px solid #e9e9e9;
+        height: 50px;
+        display: inline-block;
+        margin-right: 7px;
+        position: relative;
+        & .quantity {
+            border: 0;
+            width: 125px;
+            border: 0;
+            height: 46px;
+            text-align: center;
+            padding: 0 38px;
+            font-size: calc(var(--font-size-body, 14px) + 4px);
+            outline: none;
+        }
+        & .btn-left,
+        .btn-right {
+            height: 100%;
+            background-color: transparent;
+            padding: 12px;
+            outline: none;
+            border: 0px;
+            cursor: pointer;
+            &.disabled {
+                pointer-events: none;
+                user-select: none;
+                opacity: 0.2;
+            }
+        }
+        & .btn-left {
+            top: calc(50% - 25px);
+            left: 0%;
+            position: absolute;
+        }
+        & .btn-right {
+            top: calc(50% - 25px);
+            right: 0%;
+            position: absolute;
+        }
+    }
+    & .btn-add {
+        flex: 1;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        text-transform: uppercase;
+        font-weight: 600;
+        height: 50px;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        &:hover {
+            background-color: var(--color-brown);
+        }
+    }
+    & .wishlist {
+        display: flex;
+        justify-content: flex-end;
+        & .btn-wishlist {
+            margin: 5px 0px;
+            margin-left: 12px;
+            text-align: center;
+            color: var(--color-black);
+            font-weight: 400;
+            background: transparent;
+            border: 1px solid #e9e9e9;
+            transition: all 0.3s ease;
+            height: 50px;
+            width: 50px;
+            font-size: 2rem;
+            cursor: pointer;
+            &:hover {
+                background-color: var(--color-brown);
+                color: var(--color-white);
+            }
+        }
+    }
+    & .btn-buynow {
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        background: transparent;
+        color: #999;
+        margin-right: 20px;
+        cursor: pointer;
+        padding: 20px 0px;
+        width: 100%;
+        margin: 5px 0;
+        border: 1px solid #e9e9e9;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: var(--color-brown);
+            color: var(--color-white);
+        }
+    }
+}
+.safe-checkout {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    padding: 40px 25px 25px;
+    background: #f8f5f4;
+    text-align: center;
+    & .img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    & .title-checkout {
+        letter-spacing: 2px;
+        font-size: 1.4rem;
+    }
+}
+.product-shipping {
+    ul {
+        li {
+            padding: 12px 0px;
+            list-style-type: none;
+            color: rgb(46, 46, 47);
+            .text-shipping {
+                padding-left: 6px;
+                font-size: 1.4rem;
+                color: #666666;
+            }
+        }
+    }
+}
+.hidden {
+    display: none;
+}
+// custom css modal
+.overflow-y{
+    overflow-y: scroll;
+    height: 80%;
+
+}

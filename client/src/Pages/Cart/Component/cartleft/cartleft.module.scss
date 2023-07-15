@@ -1,0 +1,192 @@
+@mixin hover-bg {
+    &:hover {
+        background: var(--color-brown);
+    }
+}
+@mixin field-radio {
+    list-style-type: none;
+    & input {
+        display: none;
+        &:checked ~ label::before {
+            background-color: black;
+        }
+        &:checked > label::before {
+            background-color: black;
+        }
+        &:checked ~ .payment-text {
+            transform: translateY(0px);
+            display: block;
+            opacity: 1;
+        }
+    }
+    & label {
+        margin: 0;
+        margin-left: 0;
+        font-weight: 400;
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 12px;
+        display: block;
+        cursor: pointer;
+        &::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border: 1px solid #666;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 6px);
+            border-radius: 999px;
+            background-color: transparent;
+        }
+    }
+}
+// -------------Cart total-----------------
+.cart-total-wrap {
+    background-color: #f6f6f6;
+    padding: 30px 50px;
+    height: 100%;
+    width: 100%;
+    & .cart-total-title {
+        font-weight: 500;
+        font-size: 2.5rem;
+        color: var(--color-black);
+        padding: 24px 0px;
+        margin: 0;
+        line-height: 1.8;
+        border-bottom: 0;
+        text-transform: uppercase;
+    }
+    & .sub-total,
+    .shipping,
+    .total,
+    .discount,
+    .product-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0px;
+        border-bottom: 2px solid #dedede;
+        & .sub-total-text {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        & .sub-total-price {
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        & .shipping-text {
+            font-weight: 500;
+        }
+        & .shipping-checkbox {
+            @include field-radio();
+        }
+        & .total-price {
+            font-size: 3rem;
+        }
+        & .total-text {
+            font-weight: 500;
+        }
+        & .discount-text {
+            font-weight: 500;
+        }
+
+        & .close-discount {
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            &:hover {
+                transform: rotate(90deg);
+                color: var(--color-brown);
+            }
+        }
+        & .product-info {
+            display: flex;
+            align-items: center;
+            // flex-wrap: wrap; 
+            & .product-content {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 12px;
+                & .product-name {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    max-width: 250px;
+                    display: block;
+                    padding-right: 4px;
+                }
+                & .product-quantity {
+                    display: block;
+                    width: 100%;
+                    font-weight: bold;
+                }
+            }
+        }
+        & .product-price {
+            font-weight: 500;
+        }
+    }
+    & .payment-methods {
+        padding: 20px;
+        margin-bottom: 30px;
+        list-style: none;
+        margin-top: 20px;
+        border: 1px solid #d9d9d9;
+        @include field-radio();
+        & .payment-online {
+            display: flex;
+            & label {
+                margin-right: 5px;
+            }
+        }
+        & .payment-text {
+            line-height: 1.5;
+            transform: translateY(-50px);
+            display: none;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+    }
+    & .btn-checkout {
+        padding: 0 30px;
+        margin-top: 30px;
+        & .btn {
+            background: var(--color-black);
+            color: #fff;
+            padding: 24px 20px;
+            border-radius: 0;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            font-weight: 500;
+            @include hover-bg();
+        }
+    }
+}
+// -----------------------------
+// checkout css
+.background-none {
+    background-color: transparent;
+}
+.border {
+    border: 1px solid black;
+}
+.cart-total-wrap {
+    & .sub-total {
+        & .fontsize-sm {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+    }
+}
+.color-brown {
+    color: var(--color-brown);
+}
+.error {
+    color: red;
+}

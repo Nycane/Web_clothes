@@ -1,0 +1,123 @@
+// .background-contact {
+//     background-image: url('https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/bg-breadcrumb.jpg)');
+//     margin: 0 0 90px;
+//     font-size: calc(var(--font-size-body, 14px) + 6px);
+//     padding: 70px 0 75px;
+//     background-position: 50%;
+//     text-align: center;
+//     position: relative;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     margin: 0;
+//     margin-bottom: 60px;
+// }
+// .wrap-content {
+//     & .title {
+//         margin-top: 0;
+//         font-size: 40px;
+//         text-transform: uppercase;
+//         text-align: center;
+//         color: #222222;
+//         font-size: 4rem;
+//         font-weight: 500;
+//         margin-bottom: 12px;
+//     }
+//     & .icon {
+//         font-size: 1rem;
+//         padding: 0 10px;
+//     }
+//     & .title-page {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         & .before {
+//             text-decoration: none;
+//             font-size: 1.5rem;
+//             color: #222;
+//         }
+//         & .current {
+//             font-size: 1.5rem;
+//             color: #666;
+//         }
+//     }
+// }
+// hover text
+@import '../../Scss/mixins/hoverText.scss';
+.contact-form {
+    & .title {
+        font-size: 3rem;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    & .form-input {
+        height: 50px;
+        line-height: 50px;
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 10px 20px;
+        border: 0;
+        font-weight: 400;
+        border: 1px solid #e5e5e5;
+    }
+    & .form-textarea {
+        width: 100% !important;
+        height: 370px;
+        max-height: 370px;
+        padding: 10px 20px;
+        border: 0;
+        font-weight: 400;
+        margin-bottom: 23px;
+        border: 1px solid #e5e5e5;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    & .form-label {
+        color: var(--color-black);
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    & .form-button {
+        height: 55px;
+        line-height: 55px;
+        font-size: 1.4rem;
+        padding: 0 75px;
+        color: var(--color-white);
+        background: var(--color-black);
+        border: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: var(--color-brown);
+        }
+    }
+}
+
+.info-wrap {
+    margin: 0px 0px 25px 0px;
+    padding: 0px 0px 20px 0px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #86868650;
+    & .title {
+        font-size: 2rem;
+        text-align: start;
+        text-transform: capitalize;
+        font-weight: 500;
+        padding-bottom: 12px;
+    }
+    & .text {
+        color: var(--color-black);
+        text-decoration: none;
+        font-size: 1.4rem;
+    }
+}
+.list-icon {
+    .icon-social {
+        @include hover-text;
+        margin-right: 15px;
+    }
+}

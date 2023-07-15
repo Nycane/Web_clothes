@@ -1,0 +1,20 @@
+.product-wrap {
+    width: 225px;
+    height: 305px;
+}
+.product-content {
+    & .title-product {
+        text-decoration: none;
+        color: var(--color-black);
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        padding: 16px 0px;
+        display: block;
+        cursor: pointer;
+    }
+    & .price-product {
+        color: var(--color-brown);
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+}

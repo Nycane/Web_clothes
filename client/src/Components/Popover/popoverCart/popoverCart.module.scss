@@ -1,0 +1,116 @@
+.cart-wrap {
+    width: 420px;
+    height: 280px;
+    position: relative;
+}
+.cart-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.cart-total {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 99;
+    position: absolute;
+    background-color: var(--color-white);
+    bottom: -35%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    & .total {
+        padding: 6px 12px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: var(--color-brown);
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    & .options {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 12px;
+        & .viewcart,
+        .checkout {
+            width: 170px;
+            padding: 15px 0px;
+            cursor: pointer;
+            background-color: var(--color-black);
+            color: var(--color-white);
+            &:hover {
+                background-color: var(--color-brown);
+            }
+        }
+    }
+}
+.cart-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+}
+.cart-item {
+    width: 100%;
+    height: 120px;
+    margin: 16px 0px;
+}
+.cart-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    & .img {
+        width: 100px;
+        height: fit-content;
+    }
+    & .cart-info {
+        position: relative;
+        margin-left: 16px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        & .title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 250px;
+            display: block;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: start;
+        }
+        & .color-size,
+        .quantity,
+        .price {
+            text-align: start;
+            display: block;
+            width: 100%;
+        }
+        & .close {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            &:hover{
+              color: var(--color-brown);
+              cursor: pointer;
+            }
+        }
+    }
+}
+// .tippy-box[data-animation="scale"] {
+//     animation: tippy-scale 0.2s ease-in-out;
+//   }
+  
+//   /* Thêm animating scale */
+//   @keyframes tippy-scale {
+//     from {
+//       transform: scale(0);
+//     }
+//     to {
+//       transform: scale(1);
+//     }
+//   }

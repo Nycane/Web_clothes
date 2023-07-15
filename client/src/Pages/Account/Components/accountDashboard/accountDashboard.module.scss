@@ -1,0 +1,21 @@
+.hello-user{
+    margin-bottom: 14px;
+    color: #666;
+
+    & .text-force{
+        font-weight: 600;
+        line-height: 1.7;
+        color: #666;
+        text-align: left
+    }
+    & .a{
+        &:hover{
+            color: var(--color-brown);
+        }
+    }
+}
+.text-info{
+    line-height: 1.7;
+    color: #666;
+    text-align: left;
+}

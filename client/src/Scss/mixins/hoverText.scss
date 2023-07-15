@@ -1,0 +1,7 @@
+@mixin hover-text() {
+    &:hover {
+        color: var(--color-brown);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+}

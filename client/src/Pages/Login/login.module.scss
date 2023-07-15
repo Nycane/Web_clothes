@@ -1,0 +1,102 @@
+.wrap {
+    width: 500px;
+    height: 720px;
+    background-color: var(--color-white);
+    box-shadow: 0px 4px 4px 4px #e5e6e7;
+    overflow: hidden;
+    position: relative;
+}
+.singin-content {
+    padding: 40px;
+}
+.singin-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    & .title-login,
+    .title-register {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        font-size: 1.6rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 0 40px 45px;
+        transition: transform 0.5s ease;
+        visibility: hidden;
+        &.active {
+            transform: translateX(0%);
+            visibility: visible;
+        }
+    }
+}
+.form-signin {
+    position: absolute;
+    transform: translateX(140%);
+    padding: 40px;
+    transition: transform 0.5s ease;
+    visibility: hidden;
+    width: 100%;
+    & .error {
+        color: red;
+        display: block;
+    }
+    & input {
+        padding: 16px 20px;
+        display: block;
+        width: 100%;
+        margin: 12px 0px;
+        border: 1px solid #e5e5e5;
+    }
+
+    & .forgetpassword {
+        margin-top: 12px;
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 14px;
+        display: inline-block;
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: -2px;
+            width: 100%;
+            transform: scaleX(1);
+            height: 1px;
+            background-color: var(--color-black);
+            transition: transform 0.4s ease;
+        }
+        &:hover::before {
+            transform: scaleX(0.5);
+        }
+    }
+
+    & .btn-signin,
+    .btn-next-register {
+        margin-top: 14px;
+        width: 100%;
+        padding: 17px 20px;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: var(--color-brown);
+        }
+    }
+
+    & .btn-next-register {
+        background-color: rgba(34, 34, 34, 0.6);
+    }
+
+    &.active {
+        visibility: visible;
+        transform: translateX(0%);
+    }
+}

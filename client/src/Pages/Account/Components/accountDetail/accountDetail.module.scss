@@ -1,0 +1,43 @@
+.field-item{
+    margin-bottom: 14px;
+    & .label{
+        display: block;
+        width: 100%;
+        color: #666666;
+        margin: 7px 0px;
+        font-weight: 500;
+        font-size: 1.4rem;
+        }
+    & .input{
+        border: 1px solid #e5e5e5;
+        padding: 8px 6px;
+        background: transparent;
+        border-radius: 0;
+        -moz-border-radius: 0;
+        width: 100%;
+    }
+    & .error{
+        color: red;
+    }
+    & .display-name{
+        font-size: 1.4rem;
+        color: #666666;
+        display: block;
+        width: 100%;
+    }
+}
+
+.btn-changepw{
+    color: #fff;
+    background: black;
+    padding: 0 50px;
+    line-height: 50px;
+    cursor: pointer;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .3s ease;
+    &:hover{
+        background-color: var(--color-brown);
+    }
+}
