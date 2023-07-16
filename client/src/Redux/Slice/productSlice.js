@@ -16,7 +16,7 @@ const productSlice = createSlice({
             state.isLoading=true;
         })
             builder.addCase(getProductVariants.fulfilled,(state,action)=>{
-                console.log("product detail",action)
+                // console.log("product detail",action)
                 state.productDetail=action.payload
                 state.isLoading=false
             })

@@ -9,14 +9,11 @@ import {
     InstapaperShareButton,
     PinterestIcon,
     PinterestShareButton,
-    TwitterShareButton,
-    MailruShareButton,
-    MailruIcon,
+    TwitterShareButton
 } from 'react-share';
-import cartSlice from '../../Redux/Slice/cartSlice';
+import { addToCart } from '../../Redux/Slice/cartSlice';
 import wishlistSlice from '../../Redux/Slice/wishlistSLice';
 import formatPrice from '../../Utils/formatPrice';
-import { addToCart } from '../../Redux/Slice/cartSlice';
 import styles from './wishList.module.scss';
 const cx = classNames.bind(styles);
 function WishList() {

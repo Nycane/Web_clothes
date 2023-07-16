@@ -1,18 +1,14 @@
-import Card from '../../Products/Card';
-import productApi from '../../../Api/productApi'
 import { faAngleLeft, faAngleRight, faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Col, Container, Row } from 'react-bootstrap';
-import Slider from 'react-slick';
+import classNames from 'classnames/bind';
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import { Link} from 'react-router-dom';
+import Card from '../../Products/Card';
 import styles from './sliderProduct.module.scss';
-import {getProducts , getProductVariants}from '../../../Redux/Slice/productSlice';
-import classNames from 'classnames/bind';
-import { useEffect, useState,useMemo,memo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 const cx = classNames.bind(styles);
 // Custom Arrow
 function SampleNextArrow(props) {

@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Card from '../../Components/Products/Card';
 // import productApi from '../../Api/productApi';
+import Tippy from '@tippyjs/react';
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -9,12 +10,9 @@ import ReactSlider from 'react-slider';
 import 'tippy.js/animations/scale.css';
 import 'tippy.js/dist/tippy.css';
 import debounce from '../../Components/Hook/debounce';
-import Loading from '../../Components/Loading/loading';
 import shopSlice, { filterProducts, getAllProducts } from '../../Redux/Slice/shopSlice';
 import formatPrice from '../../Utils/formatPrice';
 import styles from './shop.module.scss';
-import Tippy from '@tippyjs/react';
-import Skeleton from 'react-loading-skeleton';
 const cx = classNames.bind(styles);
 let max_price_df = 10000000;
 let min_price_df = 1000000;
