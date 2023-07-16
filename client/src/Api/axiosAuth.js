@@ -19,7 +19,7 @@ function createaAxiosAuth({ accessToken, refreshToken }, dispatch) {
             if (decode.exp < Date.now() / 1000) {
                 // console.log('token', refreshToken);
                 token = await axiosClient.post(
-                    'http://localhost:8000/api/v1/user/refreshtoken',
+                    `${process.env.REACT_APP_API_URL}/user/refreshtoken`,
                     JSON.stringify({ token: refreshToken }),
                 );
                 dispatch(userSlice.actions.refreshToken(token));
