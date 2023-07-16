@@ -116,7 +116,7 @@ class orderController {
     const userId = req.params.id;
     try {
       const [orderId] = await pool.query(
-        "SELECT count(order_details.order_id) as countOrder,orders.created_at,orders.id,orders.total_price,orders.discount_amount,orders.status from orders,users,order_details where users.id=orders.user_id and orders.id = order_details.order_id and orders.user_id = ? GROUP by orders.id",
+        "SELECT count(order_details.order_id) as countOrder,orders.created_at,orders.id,orders.total_price,orders.discount_amount,orders.status from orders,users,order_details where users.id=orders.user_id and orders.id = order_details.order_id and orders.user_id = ? GROUP by orders.id order by orders.id asc",
         [userId]
       );
       res.status(200).json({
