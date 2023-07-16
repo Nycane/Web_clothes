@@ -1,14 +1,12 @@
-import Slider from 'react-slick';
-import ImageMagnify from '../ImageMagnify';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
+import 'react-loading-skeleton/dist/skeleton.css';
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
+import ImageMagnify from '../ImageMagnify';
 import styles from './customPaging.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { useSelector } from 'react-redux';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
 const cx = classNames.bind(styles);
 function SampleNextArrow(props) {
     const className = cx('arrow-next');

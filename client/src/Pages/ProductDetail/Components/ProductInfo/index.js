@@ -3,24 +3,22 @@ import { faBusinessTime, faMinus, faPlus, faStar, faTruckFast } from '@fortaweso
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react';
 import classNames from 'classnames/bind';
-import { useEffect, useRef, useState, memo } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import { useDispatch, useSelector } from 'react-redux';
-import CustomModal from '../../../../Components/Modal/modal';
-import { addToCart } from '../../../../Redux/Slice/cartSlice';
 import 'tippy.js/animations/scale.css';
 import 'tippy.js/dist/tippy.css';
+import CustomModal from '../../../../Components/Modal/modal';
 import Toast from '../../../../Components/Toastify/toastify';
-import wishlistSlice from '../../../../Redux/Slice/wishlistSLice';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
-import cartSlice from '../../../../Redux/Slice/cartSlice';
+import { addToCart } from '../../../../Redux/Slice/cartSlice';
 import { addWishList } from '../../../../Redux/Slice/wishlistSLice';
 import formatter from '../../../../Utils/formatPrice';
 import styles from './productInfo.module.scss';
 const cx = classNames.bind(styles);
 
 function ProductInfo({ product }) {
-    console.log("product",product)
+    // console.log("product",product)
     const isLoading = useSelector((state) => state.product.isLoading);
     const view = useSelector((state) => state.user.countView);
     const [viewCurrent, setViewCurrent] = useState(31);
@@ -30,7 +28,7 @@ function ProductInfo({ product }) {
     const [size, setSize] = useState('');
     const dispatch = useDispatch();
     function handleAdd(product) {
-        console.log(product)
+        // console.log(product)
         if (product.variant.length > 0 && (!color || !size)) {
             Toast('warning', 'Please select size or color');
         } else {

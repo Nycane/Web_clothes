@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import authApi from '../../Api/authApi';
 import productApi from "../../Api/productApi";
 
 const productSlice = createSlice({
@@ -42,5 +41,5 @@ const getProducts = createAsyncThunk('product/getProducts',async()=>{
     let kq = await productApi.getAllProduct()
     return kq
 })
-export {getProductVariants ,getProducts}
+export { getProductVariants, getProducts };
 export default productSlice
