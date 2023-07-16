@@ -81,13 +81,13 @@ function WishList() {
                             </table>
                             <div className={cx('list-icon')}>
                                 <span className={cx('text-share')}>share on:</span>
-                                <TwitterShareButton url="https://wpbingosite.com/wordpress/mafoil/wishlist/">
+                                <TwitterShareButton url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
                                     <FontAwesomeIcon
                                         className={cx('icon-social-tw')}
                                         icon={faTwitter}
                                     ></FontAwesomeIcon>
                                 </TwitterShareButton>
-                                <FacebookShareButton url="https://wpbingosite.com/wordpress/mafoil/wishlist/">
+                                <FacebookShareButton url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
                                     <FontAwesomeIcon
                                         className={cx('icon-social-fb')}
                                         icon={faFacebookF}
@@ -95,11 +95,11 @@ function WishList() {
                                 </FacebookShareButton>
                                 <PinterestShareButton
                                     media="http://example.com/image.jpg"
-                                    url="https://wpbingosite.com/wordpress/mafoil/wishlist/"
+                                    url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist"
                                 >
                                     <PinterestIcon className={cx('icon-social-db')}></PinterestIcon>
                                 </PinterestShareButton>
-                                <InstapaperShareButton url="https://wpbingosite.com/wordpress/mafoil/wishlist/">
+                                <InstapaperShareButton url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
                                     <FontAwesomeIcon
                                         className={cx('icon-social-ins')}
                                         icon={faInstagram}

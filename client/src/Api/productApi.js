@@ -29,7 +29,7 @@ const productApi = {
         }
     },
     async filterProduct(query) {
-        console.log(query);
+        // console.log(query);
         let url = `/product/filter`;
         try {
             if (query.sort) {
