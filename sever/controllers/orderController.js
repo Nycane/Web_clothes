@@ -225,7 +225,7 @@ class orderController {
     var signed = hmac.update(Buffer.from(signData, "utf-8")).digest("hex");
     vnp_Params["vnp_SecureHash"] = signed;
     vnpUrl += "?" + querystring.stringify(vnp_Params, { encode: false });
-    console.log(vnpUrl);
+    console.log("VNp url",vnpUrl);
     res.status(200).json({ message: "Success", data: vnpUrl });
   }
 
