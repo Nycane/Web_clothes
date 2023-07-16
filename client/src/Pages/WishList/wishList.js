@@ -81,25 +81,25 @@ function WishList() {
                             </table>
                             <div className={cx('list-icon')}>
                                 <span className={cx('text-share')}>share on:</span>
-                                <TwitterShareButton url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
+                                <TwitterShareButton media="https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/banner-34.jpg"  url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
                                     <FontAwesomeIcon
                                         className={cx('icon-social-tw')}
                                         icon={faTwitter}
                                     ></FontAwesomeIcon>
                                 </TwitterShareButton>
-                                <FacebookShareButton url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
+                                <FacebookShareButton media="https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/banner-34.jpg" url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
                                     <FontAwesomeIcon
                                         className={cx('icon-social-fb')}
                                         icon={faFacebookF}
                                     ></FontAwesomeIcon>
                                 </FacebookShareButton>
                                 <PinterestShareButton
-                                    media="http://example.com/image.jpg"
+                                    media="https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/banner-34.jpg"
                                     url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist"
                                 >
                                     <PinterestIcon className={cx('icon-social-db')}></PinterestIcon>
                                 </PinterestShareButton>
-                                <InstapaperShareButton url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
+                                <InstapaperShareButton media="https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/banner-34.jpg" url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
                                     <FontAwesomeIcon
                                         className={cx('icon-social-ins')}
                                         icon={faInstagram}
