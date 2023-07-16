@@ -221,12 +221,13 @@ class orderController {
     var querystring = require("qs");
     var signData = querystring.stringify(vnp_Params, { encode: false });
     var crypto = require("crypto");
+    
     var hmac = crypto.createHmac("sha512", secretKey);
     var signed = hmac.update(new Buffer(signData, "utf-8")).digest("hex");
     vnp_Params["vnp_SecureHash"] = signed;
     vnpUrl += "?" + querystring.stringify(vnp_Params, { encode: false });
     console.log("VNp url",vnpUrl);
-    res.status(200).json({ message: "Success", data: vnpUrl });
+    res.status(200).json({ message: "Success", data: "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html"+vnpUrl });
   }
 
   async vnp_ipn(req, res) {
