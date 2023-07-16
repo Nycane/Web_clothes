@@ -10,7 +10,7 @@ class userController {
       ...req.body,
       password: hashPassword,
     };
-    console.log("user",user)
+    // console.log("user",user)
     try {
       const [row, fields] = await pool.query(
         "select * from users where email = ?",
@@ -20,7 +20,7 @@ class userController {
       if (row.length > 0) {
         res.status(400).json({ message: "Error" });
       } else {
-        console.log("vo toi dau khong")
+        // console.log("vo toi dau khong")
         const [row, field] = await pool.query(
           "INSERT INTO users (id_role,username,password,email,phone,address) values (?,?,?,?,?,?)",
           [
@@ -35,7 +35,7 @@ class userController {
         res.status(200).json({ message: "Success" });
       }
     } catch (error) {
-      console.log("Hay bi loi")
+      // console.log("Hay bi loi")
       res.status(500).json({ message: "An error occurred while registering" });
     }
   }

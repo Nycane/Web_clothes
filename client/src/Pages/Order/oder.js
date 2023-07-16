@@ -21,7 +21,7 @@ function Order() {
     const isLoading = useSelector((state) => state.order.isLoading);
     const dispatch = useDispatch();
     const order = useSelector((state) => state.order.order);
-    console.log('loading', isLoading);
+    // console.log('loading', isLoading);
     // Lấy thông tin đơn hàng khi thanh toán
     useEffect(() => {
         if (!location.search || isSuccess) {

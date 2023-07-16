@@ -69,7 +69,7 @@ const cartSlice = createSlice({
     },
 });
 const addToCart = createAsyncThunk('cart/addToCart',(action,{dispatch})=>{
-    console.log("addtocart",action)
+    // console.log("addtocart",action)
     dispatch(cartSlice.actions.add(action))
     Toast('success',"Add To Cart Success ")
 })

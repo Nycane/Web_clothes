@@ -69,7 +69,7 @@ const createPayment = createAsyncThunk('order/createPayment', async (data, { dis
 const getResultPayment = createAsyncThunk('order/getPayment', async (data, { dispatch }) => {
     console.log('Data ở createAsyncTHunk', data);
     let kq = await orderApi.getResultPayment(data, dispatch);
-    console.log(kq);
+    // console.log(kq);
     if (kq?.rspCode === '00') {
         Toast('success', 'Checkout Success');
     } else {

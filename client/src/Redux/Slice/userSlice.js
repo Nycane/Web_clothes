@@ -48,7 +48,7 @@ const userSlice = createSlice({
             };
         });
         builder.addCase(getComments.fulfilled, (state, action) => {
-            console.log(action);
+            // console.log(action);
             state.listComments = action.payload.data.listComments;
             state.countView = action.payload.data.count;
         });
@@ -58,7 +58,7 @@ const userSlice = createSlice({
 // LOGIN
 const login = createAsyncThunk('user/login', async (data) => {
     const result = await authApi.login(data);
-    console.log(result)
+    // console.log(result)
     if (result.response?.data.message === 'Incorrect password') {
         Toast('error', result.response.data.message);
     } else if (result.response?.data.message === 'Incorrect account') {
@@ -83,7 +83,7 @@ const register = createAsyncThunk('user/register', async (data) => {
 // LOGOUT
 const logout = createAsyncThunk('user/logout', async (data) => {
     const kq = await authApi.logout(data);
-    console.log(kq)
+    // console.log(kq)
     if (kq.message === 'Logout Success') {
         Toast('success', kq.message);
         return kq.message;

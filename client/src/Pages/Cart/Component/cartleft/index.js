@@ -15,7 +15,7 @@ function CartLeft({ checkout, products, btnSubmit, register, errors }) {
     function handleRemoveCoupoun() {
         dispatch(cartSlice.actions.setCoupoun(''));
     }
-    console.log("product",products)
+    // console.log("product",products)
     // function handleVerifyUser(){
     //     ((user?.username && user?.id) ? navigate("/") :alert("Please login to checkout"))
     // }

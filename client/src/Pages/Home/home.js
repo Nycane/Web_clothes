@@ -13,7 +13,7 @@ import styles from './home.module.scss';
 const cx = classNames.bind(styles);
 function Home() {
     const products = useSelector(state=>state.product.products)
-    console.log("home",products)
+    // console.log("home",products)
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(getProducts())

@@ -21,7 +21,7 @@ class productsController {
       }));
       res.status(200).json(productVariants);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       res.status(500).json({ error: "Not Found" });
     }
   }
@@ -51,7 +51,7 @@ class productsController {
       );
       res.json(row);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       res.status(500).json({ error: "Not Found" });
     }
   }
@@ -64,7 +64,7 @@ class productsController {
       );
       res.json(row);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       res.status(500).json({ error: "Not Found" });
     }
   }
@@ -151,8 +151,8 @@ class productsController {
   //Filter product 
   async filterProducts(req, res) {
     const { sort, min_price, max_price, color, size } = req.query;
-    console.log(min_price, max_price);
-    console.log("size", size);
+    // console.log(min_price, max_price);
+    // console.log("size", size);
     try {
       let condition = `IF(products.price_discount >0, products.price_discount, price) between ${min_price} and ${max_price}`;
       let query = ``;

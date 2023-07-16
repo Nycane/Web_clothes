@@ -56,7 +56,7 @@ class orderController {
         message: "Payment Success",
       });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       res.status(500).json({ error: "Not Found" });
     }
   }
@@ -75,7 +75,7 @@ class orderController {
         " SELECT products.name,order_details.quantity,order_details.total,order_details.color,order_details.size from products,order_details,orders WHERE order_details.order_id=orders.id and order_details.product_id=products.id and orders.id = ?",
         [orderId[0].id]
       );
-      console.log("productdetail",productDetail)
+      // console.log("productdetail",productDetail)
       res.status(200).json({
         message: "Succes",
         data: {
