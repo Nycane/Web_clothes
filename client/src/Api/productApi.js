@@ -3,7 +3,7 @@ import createAxiosAuth from './axiosAuth';
 const productApi = {
     async getAllProduct() {
         try {
-            const url = 'product';
+            const url = '/product';
             const kq = await axiosClient.get(url);
             return kq;
         } catch (error) {
