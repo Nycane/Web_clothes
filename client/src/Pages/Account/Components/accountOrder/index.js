@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getOrderById } from '../../../../Redux/Slice/orderSlice';
 import classNames from 'classnames/bind';
 import styles from './accountOrder.module.scss';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import { useEffect } from 'react';
 import formatPrice from '../../../../Utils/formatPrice';
 import { Link } from 'react-router-dom';
@@ -11,6 +13,7 @@ const cx = classNames.bind(styles);
 function AccountOrder() {
     const user = useSelector((state) => state.user.user);
     const orders = useSelector((state) => state.order.orderByUser);
+    const isLoading = useSelector(state=>state.order.isLoading)
     // console.log(orders);
     const dispatch = useDispatch();
     useEffect(() => {
@@ -27,7 +30,9 @@ function AccountOrder() {
         <Container fluid={true}>
             <Row>
                 <Col lg={12} md={12}>
-                    <>
+                  { 
+                  isLoading ? <Skeleton height={600}></Skeleton>:
+                   <>
                         {orders?.length > 0 ? (
                           <div className={cx('order-scroll')}>
                                 <table className={cx('table')}>
@@ -105,6 +110,7 @@ function AccountOrder() {
                             </>
                         )}
                     </>
+                    }
                 </Col>
             </Row>
         </Container>

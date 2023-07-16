@@ -40,7 +40,13 @@ const orderSlice = createSlice({
                 state.isSuccess = false;
             }
         });
-        builder.addCase(getOrderById.fulfilled, (state, action) => {
+        builder.addCase(getOrderById.pending, (state, action) => {
+            state.isLoading=true
+            state.orderByUser = action?.payload?.data;
+        });
+        builder.addCase(getOrderById.fulfilled, (state, action) => 
+        {
+            state.isLoading=false
             state.orderByUser = action?.payload?.data;
         });
         builder.addCase(getOrderDetailById.fulfilled, (state, action) => {
