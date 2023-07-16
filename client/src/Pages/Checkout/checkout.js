@@ -27,7 +27,7 @@ function Checkout() {
             .email('Please enter a valid email address: Example@gmail.com')
             .required('This email field cannot be empty'),
         address: yup.string().required('This field cannot be empty'),
-        phone: yup.number().max(13).typeError('This field is phone number').required('This field cannot be empty'),
+        phone: yup.number().maxLength(13).typeError('This field is phone number').required('This field cannot be empty'),
     };
     const optionsForm = {
         defaultValues: {
