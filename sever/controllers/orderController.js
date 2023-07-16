@@ -301,7 +301,7 @@ class orderController {
     var signData = querystring.stringify(vnp_Params, { encode: false });
     var crypto = require("crypto");
     var hmac = crypto.createHmac("sha512", secretKey);
-    var signed = hmac.update(new Buffer(signData, "utf-8")).digest("hex");
+    var signed = hmac.update(Buffer.from(signData, "utf-8")).digest("hex");
     if (secureHash === signed) {
       console.log(vnp_Params["vnp_ResponseCode"]);
       //Kiem tra xem du lieu trong db co hop le hay khong va thong bao ket qua
