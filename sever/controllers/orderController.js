@@ -183,7 +183,7 @@ class orderController {
     // var dateFormat = require("dateformat");
     var tmnCode = process.env.VNP_TMNCODE;
     var secretKey = process.env.VNP_HASHSECRET;
-    var vnpUrl = process.env.VNP_URL;
+    var vnpUrl = process.env.VNP_URL||"https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
     var returnUrl = process.env.VNP_RETURNURL;
 
     console.log("vnpURL",vnpUrl)
