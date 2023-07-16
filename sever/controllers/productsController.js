@@ -136,7 +136,10 @@ class productsController {
   async getBrandProducts(req, res) {
     try {
       const [row, fields] = await pool.query(
-        `SELECT brand.id,brand.name,count(products.id) as countproduct from brand,products where brand.id=products.id_brand GROUP BY brand.name;`
+        `SELECT brand.id, brand.name, COUNT(products.id) AS countproduct
+        FROM brand, products
+        WHERE brand.id = products.id_brand
+        GROUP BY brand.id, brand.name`
       );
       res.json(row);
     } catch (error) {
