@@ -186,10 +186,10 @@ class orderController {
     var vnpUrl = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
     var returnUrl = process.env.VNP_RETURNURL;
 
-    console.log("vnpURL",vnpUrl)
-    console.log("tmnCode",tmnCode)
-    console.log("serectKey",secretKey)
-    console.log("returnUrl",returnUrl)
+    // console.log("vnpURL",vnpUrl)
+    // console.log("tmnCode",tmnCode)
+    // console.log("serectKey",secretKey)
+    // console.log("returnUrl",returnUrl)
     var date = new Date();
     const moment = require("moment");
 

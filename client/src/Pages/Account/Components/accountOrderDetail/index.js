@@ -123,6 +123,7 @@ function AccountOrderDetail() {
                                     <p className={cx('billing-item')}>{order?.orderDetail?.address}</p>
                                     <p className={cx('billing-item')}>{order?.orderDetail?.phone}</p>
                                     <p className={cx('billing-item')}>{order?.orderDetail?.email}</p>
+                                    <p className={cx('billing-item')}>{order?.orderDetail?.notes}</p>
                                 </div>
                             </div>
                 </Col>
