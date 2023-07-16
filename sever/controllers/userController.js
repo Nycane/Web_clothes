@@ -10,11 +10,13 @@ class userController {
       ...req.body,
       password: hashPassword,
     };
+    console.log("user",user)
     try {
       const [row, fields] = await pool.query(
         "select * from users where email = ?",
         [user.email]
       );
+      console.log(row)
       if (row.length > 0) {
         res.status(400).json({ message: "Error" });
       } else {
