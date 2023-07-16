@@ -9,7 +9,7 @@ import ScrollTop from './Components/ScrollBackToTop/ScrollTop';
 import HeaderBannerLayout from './Layouts/HeaderBannerLayout';
 import HeaderLayout from './Layouts/HeaderLayout';
 import NotFound from './Pages/NotFound';
-import Loading from './Components/Loading/loading';
+// import Loading from './Components/Loading/loading';
 function App() {
     return (
         <>
