@@ -185,7 +185,11 @@ class orderController {
     var secretKey = process.env.VNP_HASHSECRET;
     var vnpUrl = process.env.VNP_URL;
     var returnUrl = process.env.VNP_RETURNURL;
+
     console.log("vnpURL",vnpUrl)
+    console.log("tmnCode",tmnCode)
+    console.log("serectKey",secretKey)
+    console.log("returnUrl",returnUrl)
     var date = new Date();
     const moment = require("moment");
 
@@ -223,11 +227,11 @@ class orderController {
     var crypto = require("crypto");
     
     var hmac = crypto.createHmac("sha512", secretKey);
-    var signed = hmac.update(new Buffer(signData, "utf-8")).digest("hex");
+    var signed = hmac.update(Buffer.from(signData, "utf-8")).digest("hex");
     vnp_Params["vnp_SecureHash"] = signed;
     vnpUrl += "?" + querystring.stringify(vnp_Params, { encode: false });
     console.log("VNp url",vnpUrl);
-    res.status(200).json({ message: "Success", data: "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html"+vnpUrl });
+    res.status(200).json({ message: "Success", data:vnpUrl });
   }
 
   async vnp_ipn(req, res) {
@@ -245,7 +249,7 @@ class orderController {
     var signData = querystring.stringify(vnp_Params, { encode: false });
     var crypto = require("crypto");
     var hmac = crypto.createHmac("sha512", secretKey);
-    var signed = hmac.update(new Buffer(signData, "utf-8")).digest("hex");
+    var signed = hmac.update( Buffer.from(signData, "utf-8")).digest("hex");
     let paymentStatus = "0"; // Giả sử '0' là trạng thái khởi tạo giao dịch, chưa có IPN. Trạng thái này được lưu khi yêu cầu thanh toán chuyển hướng sang Cổng thanh toán VNPAY tại đầu khởi tạo đơn hàng.
     //let paymentStatus = '1'; // Giả sử '1' là trạng thái thành công bạn cập nhật sau IPN được gọi và trả kết quả về nó
     //let paymentStatus = '2'; // Giả sử '2' là trạng thái thất bại bạn cập nhật sau IPN được gọi và trả kết quả về nó
@@ -302,7 +306,7 @@ class orderController {
     var signData = querystring.stringify(vnp_Params, { encode: false });
     var crypto = require("crypto");
     var hmac = crypto.createHmac("sha512", secretKey);
-    var signed = hmac.update(new Buffer(signData, "utf-8")).digest("hex");
+    var signed = hmac.update(Buffer.from(signData, "utf-8")).digest("hex");
     if (secureHash === signed) {
       console.log(vnp_Params["vnp_ResponseCode"]);
       //Kiem tra xem du lieu trong db co hop le hay khong va thong bao ket qua
