@@ -62,6 +62,7 @@ const addOrder = createAsyncThunk('order/add', async (data, { dispatch }) => {
 
 const createPayment = createAsyncThunk('order/createPayment', async (data, { dispatch }) => {
     let kq = await orderApi.createPayment(data, dispatch);
+    console.log(kq)
     if (kq?.data) {
         window.location.href = kq.data;
     }
