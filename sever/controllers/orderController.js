@@ -185,7 +185,7 @@ class orderController {
     var secretKey = process.env.VNP_HASHSECRET;
     var vnpUrl = process.env.VNP_URL;
     var returnUrl = process.env.VNP_RETURNURL;
-
+    console.log("vnpURL",vnpUrl)
     var date = new Date();
     const moment = require("moment");
 
