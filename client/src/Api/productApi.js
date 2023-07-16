@@ -3,7 +3,7 @@ import createAxiosAuth from './axiosAuth';
 const productApi = {
     async getAllProduct() {
         try {
-            const url = '/products';
+            const url = '/product';
             const kq = await axiosClient.get(url);
             return kq;
         } catch (error) {
@@ -12,7 +12,7 @@ const productApi = {
     },
     async getColorProduct() {
         try {
-            const url = 'product/color';
+            const url = '/product/color';
             const color = await axiosClient.get(url);
             return color;
         } catch (error) {
@@ -21,7 +21,7 @@ const productApi = {
     },
     async getsizeProduct() {
         try {
-            const url = 'product/size';
+            const url = '/product/size';
             const size = await axiosClient.get(url);
             return size;
         } catch (error) {
@@ -30,7 +30,7 @@ const productApi = {
     },
     async filterProduct(query) {
         console.log(query);
-        let url = `product/filter`;
+        let url = `/product/filter`;
         try {
             if (query.sort) {
                 url += `?sort=${query.sort}`;
@@ -53,7 +53,7 @@ const productApi = {
     },
     async getProductById(id) {
         try {
-            const url = `product/${id}`;
+            const url = `/product/${id}`;
             const kq = await axiosClient.get(url);
             return kq;
         } catch (error) {
@@ -62,7 +62,7 @@ const productApi = {
     },
     async getProductImageById(id) {
         try {
-            const url = `product/image/${id}`;
+            const url = `/product/image/${id}`;
             const kq = await axiosClient.get(url);
             return kq;
         } catch (error) {
@@ -71,7 +71,7 @@ const productApi = {
     },
     async getProductVariantById(id) {
         try {
-            const url = `product/variant/${id}`;
+            const url = `/product/variant/${id}`;
             const kq = await axiosClient.get(url);
             return kq;
         } catch (error) {
