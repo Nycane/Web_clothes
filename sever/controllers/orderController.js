@@ -68,7 +68,7 @@ class orderController {
         "select id from orders order by id desc"
       );
       const [orderDetail] = await pool.query(
-        " SELECT orders.id,orders.total_price,orders.discount_amount,orders.coupon_code,orders.created_at,orders.payment_method,orders.shipping,delivery_address.fullname,delivery_address.address,delivery_address.email,delivery_address.phone,delivery_address.notes FROM delivery_address,orders WHERE orders.id=delivery_address.order_id and orders.id = ? order by orders.id",
+        " SELECT orders.id,orders.total_price,orders.discount_amount,orders.coupon_code,orders.created_at,orders.payment_method,orders.shipping,delivery_address.fullname,delivery_address.address,delivery_address.email,delivery_address.phone,delivery_address.notes FROM delivery_address,orders WHERE orders.id=delivery_address.order_id and orders.id = ?",
         [orderId[0].id]
       );
       const [productDetail] = await pool.query(
@@ -92,7 +92,7 @@ class orderController {
   async getOrderDetailById(req, res) {
     try {
       const [orderDetail] = await pool.query(
-        " SELECT orders.id,orders.total_price,orders.discount_amount,orders.coupon_code,orders.created_at,orders.payment_method,orders.shipping,delivery_address.fullname,delivery_address.address,delivery_address.email,delivery_address.phone,delivery_address.notes FROM delivery_address,orders WHERE orders.id=delivery_address.order_id and orders.id = ?",
+        " SELECT orders.id,orders.total_price,orders.discount_amount,orders.coupon_code,orders.created_at,orders.payment_method,orders.shipping,delivery_address.fullname,delivery_address.address,delivery_address.email,delivery_address.phone,delivery_address.notes FROM delivery_address,orders WHERE orders.id=delivery_address.order_id and orders.id = ? order by orders.id",
         [req.params.id]
       );
       const [productDetail] = await pool.query(
