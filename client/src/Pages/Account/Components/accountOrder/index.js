@@ -31,7 +31,7 @@ function AccountOrder() {
             <Row>
                 <Col lg={12} md={12}>
                   { 
-                  isLoading ? <Skeleton height={600}></Skeleton>:
+                  isLoading ? <Skeleton height={400}></Skeleton>:
                    <>
                         {orders?.length > 0 ? (
                           <div className={cx('order-scroll')}>
