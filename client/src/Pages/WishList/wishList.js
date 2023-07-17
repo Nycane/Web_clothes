@@ -83,7 +83,7 @@ function WishList() {
                                 <span className={cx('text-share')}>share on:</span>
                                 <TwitterShareButton 
                                 media="https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/banner-34.jpg" 
-                                 url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
+                                 url="https://mafoil.netlify.app/wishlist">
                                     <FontAwesomeIcon
                                         className={cx('icon-social-tw')}
                                         icon={faTwitter}
@@ -91,7 +91,7 @@ function WishList() {
                                 </TwitterShareButton>
                                 <FacebookShareButton 
                                 media="https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/banner-34.jpg" 
-                                url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
+                                url="https://mafoil.netlify.app/wishlist">
                                     <FontAwesomeIcon
                                         className={cx('icon-social-fb')}
                                         icon={faFacebookF}
@@ -99,13 +99,13 @@ function WishList() {
                                 </FacebookShareButton>
                                 <PinterestShareButton
                                     media="https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/banner-34.jpg"
-                                    url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist"
+                                    url="https://mafoil.netlify.app/wishlist"
                                 >
                                     <PinterestIcon className={cx('icon-social-db')}></PinterestIcon>
                                 </PinterestShareButton>
                                 <InstapaperShareButton
                                  media="https://wpbingosite.com/wordpress/mafoil/wp-content/uploads/2022/12/banner-34.jpg" 
-                                 url="https://main--kaleidoscopic-sawine-8ba085.netlify.app/wishlist">
+                                 url="https://mafoil.netlify.app/wishlist">
                                     <FontAwesomeIcon
                                         className={cx('icon-social-ins')}
                                         icon={faInstagram}
